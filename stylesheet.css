@@ -1,0 +1,14 @@
+body {
+   display: flex;
+   flex-direction: column;
+   padding: 200px;
+   margin: 0 auto;
+   color: rgb(129, 10, 129);
+   font-style: italic;
+   font-family: "Lucida Sans", sans-serif;
+   }
+
+   button {
+       cursor: pointer;
+   }
+   

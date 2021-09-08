@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+   <h1 id="title">Tip Calculator</h1>
+
+   
+
+   <div id="billAmount" class="calculator">
+       <label for="bill">Bill Amount:</label>
+       <input type="number" class="form-control" id="bill" placeholder ="ie. 25.99">
+    </div>
+    
+
+    <div id="tipAmount">
+        <label for ="tip">Tip Percentage:</label>
+        <input type="number" class="form-control" id="tip" placeholder ="10%" required>
+        <br>
+        
+    </div>
+
+    <div id="split">
+        <label for="people">People:</label>
+        <input type="number" class="form-control" id="people" placeholder="how many people paying?">
+            <br>
+            <button class="button" type="button" onClick="calculate()">Calculate</button>
+            </div>
+
+    <h2>Your Total Bill comes to: 
+        <br>
+        <span></span> </h2>
+
+    
+        
+       
+        <script>
+            function calculate(){
+           const bill = Number(document.getElementById("bill").value)
+           const tip = Number(document.getElementById("tip").value)
+           const people = Number(document.getElementById("people").value)
+           const input = Number(document.querySelectorAll(".form-control").value)
+        
+
+           const tipPercentage = tip / 100;
+           const tipAmount = bill * tipPercentage;
+           const total = (bill + tipAmount) / people
+
+           const h2 = document.querySelector("h2");
+           const span = h2.querySelector("span");
+
+           span.innerText = total
+                
+
+            
+            }
+
+       
+
+
+   </script>
+
+  
+</body>
+</html>
